@@ -1,0 +1,7 @@
+# Notes:
+# 1. Use LF newline characters. (Don't use CR+LF)
+# 2. Ensure line feed at file end.
+
+TZ=Asia/Tokyo
+
+* * * * *         root  sh /usr/local/bin/task.sh
