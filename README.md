@@ -2,6 +2,9 @@
 Docker cron test (on Ubuntu 18.04)
 
 ```
+# Build image.
+docker build -t cron-test .
+
 # Create container.
 docker run --rm --name cron-test -ti cron-test /bin/bash
 
@@ -14,9 +17,8 @@ docker run --rm --name cron-test -ti cron-test /bin/bash
 
 # --- host ---
 
-# Wait a minute...
-# Check log
-docker exec cron-test ls -laF /var/log/
+# Wait a minute... then, Check logs.
+docker exec cron-test watch -n 1 ls -laF /var/log/
 docker exec cron-test cat /var/log/cron.log
 …
 
